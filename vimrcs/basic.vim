@@ -30,6 +30,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set line number
+set number
+
 " Sets how many lines of history VIM has to remember
 set history=500
 
@@ -380,3 +383,9 @@ function! VisualSelection(direction, extra_filter) range
     let @/ = l:pattern
     let @" = l:saved_reg
 endfunction
+
+" LaTeX | map <:!pdflatex *> where * is the current .tex file
+map <leader>pt :!pdflatex %<cr>
+
+" Python | map <:!python *> where * is the current python file
+map <leader>pt :!python %<cr>
